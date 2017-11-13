@@ -1,0 +1,852 @@
+<!-- view template -->
+<!-- called from your routes in server.js -->
+
+<!-- templating docs: http://mozilla.github.io/nunjucks/ -->
+<!--TODO: use something else-->
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Manuscript Case Tour</title>
+    <meta name="description" content="A cool thing made with HyperWeb">
+    <link id="favicon" rel="icon" href="https://hyperweb.space/favicon.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/ms-styles.css">    
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/features.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  </head>
+  
+  <body>
+    <div id="kakapo-bubble-wrapper">
+      <div id="kakapo-bubble">
+        <p id="tutor-text"></p>
+        <!--<p id="click-for-more">(Click for more info!)</p>-->
+      </div>
+    </div>
+    
+    <header>
+      <nav id="menu" class="navbar navbar-default navbar-fixed-top" role="navigation">
+        
+        <a class="nav-left" href="http://www.manuscript.com/" target="_blank">
+          <img id="manuscript-logo" src="https://cdn.glitch.com/80fe1313-4d50-4abd-b0cc-432b965cbc5b%2Fmanuscript-logo-basic.png?1509924131801" alt="Manuscript">
+        </a>
+
+          <a class="nav-right" href="https://www.fogcreek.com/fogbugz/try/?fccmp=_tryfb_nav" target="_blank">
+            <button id="get-manuscript" class="btn">Get Manuscript!</button>
+          </a>
+ 
+      </nav>
+    </header>
+      
+  
+<!--     <div id="welcome" class="page-header clearfix">
+      <h1>Welcome to FogBugz!</h1>
+      <button id="what-is-this" class="btn btn-main">Guide Me!</button>
+    </div>
+    
+    <section id="explainer" class="hero">
+      <h2>
+        Take a Tour of a FogBugz Case
+      </h2>
+      <div id="explainer-text">
+        <p>
+          Let us give you a tour of a FogBugz case.  As you hover over different features,
+          you'll see a brief overview of what the feature does.  If you click, you'll get
+          some more information as well as links to related resources.
+        </p>
+          <div id="hide-explainer" class="explainer-button">Got it!</div>
+        <p>
+          Still have questions?  We're here to <a href="http://www.fogcreek.com/contact/" target="_blank">help</a>.
+        </p>    
+      </div>
+    </section> -->
+    
+
+    <section class="hero hero-fogbugz">
+      <p id="welcome">
+          Welcome to Manuscript!  This is an example of a Manuscript case.  Hover over different parts of the case to see a brief description of the highlighted feature.  Click to see more detail and links to our knowledge base.  </p>
+      <!--<div id="case-panel" class="clearfix">-->
+        <div id="kakapo-case-image-wrapper" class="clearfix">
+          <img id="kakapo-case" src="https://cdn.glitch.com/80fe1313-4d50-4abd-b0cc-432b965cbc5b%2Fimage.png?1509928599395">
+          
+          <!--Features-->
+          <!--      New features must follow the following naming conventions:-->
+          <!--          1.  Every feature must have the class "feature-box"-->
+          <!--          2.  The name of the feature should be the id in the format "name-of-feature"-->
+          <!--          3.  If the feature appears twice on the page, the ids should be "name-of-feature1"-->
+          <!--            and "name-of-feature2", and additional classes "name-of-feature" and "linked"-->
+          <!--            must be added.-->
+          
+          <div id="sf-case-assignment1" class="feature-box linked case-assignment"></div>
+          <div id="sf-case-assignment2" class="feature-box linked case-assignment"></div>
+          <div id="sf-case-number" class="feature-box"></div>
+          <div id="sf-case-hierarchy1" class="feature-box linked case-hierarchy sidebar-feature"></div>
+          <div id="sf-case-hierarchy2" class="feature-box linked case-hierarchy sidebar-feature"></div>
+          <div id="sf-case-hierarchy3" class="feature-box linked case-hierarchy sidebar-feature"></div>
+          <div id="sf-correspondent" class="feature-box sidebar-feature"></div>
+          <div id="sf-custom-fields" class="feature-box"></div>
+          <div id="sf-category" class="feature-box"></div>
+          <div id="sf-due-date" class="feature-box sidebar-feature"></div>
+          <div id="sf-evidence-based-scheduling" class="feature-box sidebar-feature"></div>
+          <div id="sf-kiln-changesets1" class="feature-box linked kiln-changesets"></div>
+          <div id="sf-kiln-changesets2" class="feature-box linked kiln-changesets sidebar-feature"></div>
+          <div id="sf-kiln-code-reviews1" class="feature-box linked kiln-code-reviews"></div>
+          <div id="sf-kiln-code-reviews2" class="feature-box linked kiln-code-reviews sidebar-feature"></div>
+          <div id="sf-milestones" class="feature-box"></div>
+          <div id="sf-notify-more-users" class="feature-box"></div>
+          <div id="sf-priority" class="feature-box sidebar-feature"></div>
+          <div id="sf-projects-and-areas" class="feature-box"></div>
+          <div id="sf-rich-text-editor" class="feature-box"></div>
+          <div id="sf-RSS-feeds" class="feature-box sidebar-feature"></div>
+          <div id="sf-see-also1" class="feature-box linked see-also"></div>
+          <div id="sf-see-also2" class="feature-box linked see-also sidebar-feature"></div>
+          <div id="sf-status1" class="feature-box"></div>
+          <div id="sf-status2" class="feature-box"></div>
+          <div id="sf-story-points" class="feature-box sidebar-feature"></div>
+          <div id="sf-subscriptions" class="feature-box sidebar-feature"></div>
+          <div id="sf-tags" class="feature-box sidebar-feature"></div>
+          <div id="sf-virtual-users" class="feature-box"></div>
+          
+        </div>
+      <!--</div>-->
+    </section>
+
+    <div id="teach-modal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+    
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 id="teach-modal-title" class="modal-title">Modal Header</h4>
+          </div>
+          <div class="modal-body">
+            <div id="teach-modal-text"></div>
+            <!--  <blockquote id="teach-modal-easter-egg">-->
+            <!--  <p>something</p>-->
+            <!--</blockquote>-->
+<!--             <div id="teach-modal-kiwi">
+              <img id="teach-modal-kiwi-img" src="https://s3.amazonaws.com/hyperweb-editor-assets/us-east-1%3Aaa38448f-bcd2-4041-a118-83176745b2a5%2FJoe%20College-Transparent-Flipped.png">
+            </div> -->
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+    
+      </div>
+    </div>
+
+    
+    <footer>
+      As ever, please feel free to reach out to our <span><a class="underlined glow-link" href="http://www.fogcreek.com/contact/" target="_blank">support team</a></span> team with any questions!
+      <br>
+      <a id="glitch-link" href="http://glitch.com" target="_blank">
+        Built With <span class="glyphicon glyphicon-heart"></span> Using Glitch
+      </a>
+    </footer>
+    
+    <!--HTML TO POPULATE SPEECH BUBBLE AND MODAL-->
+    
+    <!--RSS FEED-->
+    
+    <div id="RSS-feeds-teacher" class="hidden-text">
+      <p>
+        Manuscript automatically generates RSS Feeds for cases, filters, wikis, and discusion 
+        groups.  Use your choice of RSS aggregator to receive notifications about changes.  
+      </p>
+      <h2 id="related-resources">Related Resources</h2>
+      <ul>
+        <li>
+          <a href="http://help.fogcreek.com/12129/rss-feeds-for-filters-cases-and-wikis" target="_blank">
+            RSS Feeds for Filters
+          </a>
+        </li>  
+      </ul>
+    </div>
+    
+    <div id="RSS-feeds-tutor" class="hidden-text">
+      <strong>RSS Feeds:</strong>  
+      Stay on top of your cases with by using our automatically generated RSS feed.
+      <span id="click-for-more">(Click for more info!)</span> 
+    </div>
+
+    
+    
+    <!--CASE ASSIGNMENT -->
+    
+    <div id="case-assignment-teacher" class="hidden-text">
+      <p>
+        In Manuscript, a case is always assigned to one and only one user.  This is a core Manuscript 
+        principle: a case owned by more than one person is owned by no one. This prevents your cases
+        from slipping through the cracks.  You can customize your workflow by assigning cases to
+        virtual users or handling case assignment through our API.
+      </p>
+      <h2 id="related-resources">Related Resources</h2>
+        <li>
+          <a href="http://help.fogcreek.com/12289/user-accounts-and-administration" target="_blank">
+            User Administration and User Accounts
+          </a>
+        </li>  
+        <li>
+          <a href="https://api.manuscript.com/#Users" target="_blank">
+            Manuscript API Documentation - Users
+          </a>
+        </li>
+      </ul>
+    </div>
+    
+    <div id="case-assignment-tutor" class="hidden-text">
+      <strong>Case Assignment:</strong>  
+      A Manuscript case is assigned to only one user at a time to help
+      make sure that none of your cases slip through the cracks!
+      <span id="click-for-more">(Click for more info!)</span> 
+    </div>
+    
+    <!--CASE HIERARCHY -->
+    <div id="case-hierarchy-teacher" class="hidden-text">
+      <p>
+        Manuscript subcases allow you to break down a feature into a set of subfeatures, 
+        or, more generally, break down a task into smaller subtasks. At Fog Creek Software,
+        our adds incoming support inbox cases to cases for new features to track customer 
+        interest in new features and aggregate customer feedback on recent releases.
+      </p>
+      <p>
+        <strong>Pro-Tip:</strong>Type a new case name into the "Subcases" field to create a 
+        new subcase on the fly!
+      </p>
+      <h2 id="related-resources">Related Resources</h2>
+      <ul>
+        <li>
+          <a href="http://help.fogcreek.com/12130/parent-cases-and-subcases" target="_blank">
+            Case Hierarchy: Parent Cases and Subcases
+          </a>
+        </li>  
+        <li>
+          <a href="http://help.fogcreek.com/12221/outlining-projects-2" target="_blank">
+            Outlining Projects
+          </a>
+        </li>
+      </ul>
+    </div>
+    
+    <div id="case-hierarchy-tutor" class="hidden-text">
+      <strong>Case Hierarchy:</strong>  
+      Use subcases to break down a feature into a set of subfeatures, 
+      or, more generally, break down a task into smaller subtasks. 
+      <span id="click-for-more">(Click for more info!)</span> 
+    </div>
+    
+    <!--CASE NUMBER-->
+    
+    <div id="case-number-teacher" class="hidden-text">
+      <p>
+        Every Manuscript case on your account has a unique case number.  You can use the case number to search for
+        the case, link the case to others as parent cases, subcases, or related cases, or access and edit the case 
+        through the Manuscript API.  Clicking the case number will refesh the case (you'll also see a message at the top
+        of the screen if a change is made to the case while you are working on it).  Additionally, email correspondence 
+        is linked to a case by the case number in the subject line so that all emails on a single thread stay in one 
+        case.
+      </p>
+      <h2 id="related-resources">Related Resources</h2>
+      <ul>
+        <li>
+          <a href="http://help.fogcreek.com/12130/parent-cases-and-subcases" target="_blank">
+            Case Hierarchy: Parent Cases and Subcases
+          </a>
+        </li>  
+        <li>
+          <a href="http://help.fogcreek.com/12137/link-cases-and-wikis-with-see-also" target="_blank">
+            Easily Link Cases with “See Also”
+          </a>
+        </li>
+      </ul>
+    </div>
+    
+    <div id="case-number-tutor" class="hidden-text">
+      <strong>Case Number:</strong>  
+      Each case has a unique id which you can use to search for 
+      the case or link it to another as a parent, sub-case, or related case. 
+      <span id="click-for-more">(Click for more info!)</span> 
+    </div>
+    
+    <!--CATEGORY -->
+    
+    <div id="category-teacher" class="hidden-text">
+      <p>
+       Categorize your cases for easy filtering.  Manuscript ships with four categories, <i>Bugs</i>, 
+       <i>Features</i>, <i>Inquiries</i>, and <i>Schedule Items</i>, but you can add custom categories
+       to meet the needs of your team's workflow.  You can also add your own icons for each custom 
+       category!
+      </p>
+      <h2 id="related-resources">Related Resources</h2>
+      <ul>
+        <li>
+          <a href="http://help.fogcreek.com/12132/categories-statuses-and-workflows" target="_blank">
+            Custom Fields: Track your own case attributes
+          </a>
+        </li>  
+      </ul>
+    </div>
+    
+    <div id="category-tutor" class="hidden-text">
+      <strong>Category:</strong>  
+      Sort your cases into customizable categories for easy filtering.
+      <span id="click-for-more">(Click for more info!)</span> 
+    </div>
+
+    <!--CORRESPONDENT-->
+    
+    <div id="correspondent-teacher" class="hidden-text">
+      <p>
+        On cases generated by incoming email pulled into a Manuscript mailbox, the correspondent
+        is the email address of the customer who sent the email.  (This example case does not have a
+        correspondent because it is not an email case.)  Correspondents will receive email replies
+        to a case but will not received notifications for other case edits, so it is safe
+        to use case edits to communicate with your team about an email case.  
+      </p>
+      <h2 id="related-resources">Related Resources</h2>
+      <ul>
+        <li>
+          <a href="http://help.fogcreek.com/12177/the-correspondent" target="_blank">
+            What is the correspondent?
+          </a>
+        </li>  
+      </ul>
+    </div>
+    
+    <div id="correspondent-tutor" class="hidden-text">
+      <strong>Correspondent:</strong>  
+      The external customer whose incoming email generated this Manuscript case. 
+      <span id="click-for-more">(Click for more info!)</span> 
+    </div>
+    
+    <!--CUSTOM FIELDS-->
+    
+    <div id="custom-fields-teacher" class="hidden-text">
+      <p>
+       Custom fields allow you to track attributes of cases beyond the standard 
+       attributes (Project, Area, Milestone, etc) that ship with Manuscript.  In this case
+       the team is using a Custom Field to track a client code for billing purposes.
+       Custom fields can be set on a per project basis, and can be placed in either 
+       the case header or the sidebar.
+      </p>
+      <h2 id="related-resources">Related Resources</h2>
+      <ul>
+        <li>
+          <a href="http://help.fogcreek.com/12171/custom-fields" target="_blank">
+            Custom Fields: Track your own case attributes
+          </a>
+        </li>  
+      </ul>
+    </div>
+    
+    <div id="custom-fields-tutor" class="hidden-text">
+      <strong>Custom Fields:</strong>  
+      Add custom fields to your case views to track additional data about cases.
+      Custom fields can be added either up here or in the sidebar.
+      <span id="click-for-more">(Click for more info!)</span> 
+    </div>
+    
+    <!--DUE DATE TEACHER-->
+    
+    <div id="due-date-teacher" class="hidden-text">
+      <p>
+        Keep track of your cases by setting due dates.  Once you done this, you can sort cases
+        your list view by due date.  You can also save a filter so you can easily access all of
+        your cases that are due today or tomorrow.
+        Due date is also one of the factors that is considered as part of "importance" for our
+        "orderBy:importance" filter.  
+      </p>
+      <p>
+        If you are using Manuscript as a help deslk, you may also find it helpful 
+        to automatically set a due date for each case generated through incoming email.
+      </p>
+      <h2 id="related-resources">Related Resources</h2>
+      <ul>
+        <li>
+          <a href="http://help.fogcreek.com/12121/manuscript-ordering-by-importance" target="_blank">
+            Ordering By Importance
+          </a>
+        </li>
+        <li>
+          <a href="http://help.fogcreek.com/12146/using-manuscript-to-check-pop3-imap-and-ews-mailboxes#Processing_Incoming_Emails" target="_blank">
+            Using Manuscript to check POP3 and IMAP mailboxes
+          </a>
+        </li>
+      </ul>
+    </div>
+    
+    <div id="due-date-tutor" class="hidden-text">
+      <strong>Due Date:</strong>  
+      Make it easier to keep track of your cases with setting due dates.  
+      <span id="click-for-more">(Click for more info!)</span> 
+    </div>
+  
+    <div id="evidence-based-scheduling-teacher" class="hidden-text">
+      <p>
+        Often, we're asked before we start a project how long the project will take to complete.
+        Almost as often, our estimates are wrong.  Evidence Based Scheduling keeps track of the 
+        historical accuracy of your estimates to give you a better idea of how far you are from 
+        the finish line.
+      </p>
+      <p>
+        To take advantage of Evidence Based Scheduling, you and your teammates will need to make 
+        estimates for all of your cases, and you'll need to use time tracking to keep track of
+        how much time you're actually putting in on each case.  We compare the amount of time
+        you thought it would take you to complete a case to the amount of time it actually took 
+        you, and we build a history of your accuracy.  In time, we'll be able to see your estimates
+        and use the data we have to make our own estimate.  
+      </p>
+      <p>
+        While we recommend that developers make their own etimates, we'll keep track of how well
+        you estimate the time it will take others as well.  Importantly, Evidence Based 
+        Scheduling is based on the historical accuracy of the <i>estimator</i>, not the historical
+        speed of the developer assigned to the case.
+      </p>
+      <h2 id="related-resources">Related Resources</h2>
+      <ul>
+        <li>
+          <a href="http://help.fogcreek.com/12155/evidence-based-scheduling-ebs-2" target="_blank">
+            Evidence Based Scheduling
+          </a>
+        </li>  
+        <li>
+          <a href="http://help.fogcreek.com/12157/which-estimates-are-used-by-ebs-2" target="_blank">
+            Which estimates are used by EBS?
+          </a>
+        </li>
+        <li>
+          <a href="http://help.fogcreek.com/12159/which-resolved-statuses-are-used-by-ebs-2" target="_blank">
+            Which Resolved Statuses are Used By EBS?
+          </a>
+        </li>
+      </ul>
+    </div>
+    
+    <div id="evidence-based-scheduling-tutor" class="hidden-text">
+      <strong>Evidence Based Scheduling</strong>  
+      tracks the accuracy of your estimates over time
+      to help you gauge when your team will finish your sprint. 
+      <span id="click-for-more">(Click for more info!)</span> 
+    </div>
+    
+    <!--KILN CHANGESETS-->
+    
+    <div id="kiln-changesets-teacher" class="hidden-text">
+      <p>
+        Manuscript integrates seamlessly with Kiln, Fog Creek's version control software.  
+        Simply include a case number in a commit message to have a link to the committed 
+        changeset appear automatically in the case along with the commit message.
+      </p>
+      <h2 id="related-resources">Related Resources</h2>
+      <ul>
+        <li>
+          <a href="http://help.fogcreek.com/8282/viewing-kiln-changesets-in-fogbugz-cases" target="_blank">
+            Viewing Kiln Changesets in Manuscript Cases
+          </a>
+        </li>  
+        <li>
+          <a href="http://help.fogcreek.com/8077/adding-kiln-to-fogbugz-on-demand" target="_blank">
+            Adding Kiln to Manuscript On Demand
+          </a>
+        </li>
+      </ul>
+    </div>
+    
+    <div id="kiln-changesets-tutor" class="hidden-text">
+      <strong>Kiln Changesets:</strong>  
+      Kiln users can link code changesets directly to a case by including the case number in the commit message.  
+      <span id="click-for-more">(Click for more info!)</span> 
+    </div>
+    
+    <!--KILN CODE REVIEWS-->
+    
+    <div id="kiln-code-reviews-teacher" class="hidden-text">
+      <p>
+        Manuscript integrates seamlessly with Kiln, Fog Creek's version control software.  
+        Simply include a case number in a code review description to have a link to the code 
+        review appear automatically in the case sidebar.
+      </p>
+      <h2 id="related-resources">Related Resources</h2>
+      <ul>
+        <li>
+          <a href="http://help.fogcreek.com/8268/code-reviews-in-kiln" target="_blank">
+            Viewing Kiln Changesets in Manuscript Cases
+          </a>
+        </li>  
+        <li>
+          <a href="http://help.fogcreek.com/8077/adding-kiln-to-fogbugz-on-demand" target="_blank">
+            Adding Kiln to Manuscript On Demand
+          </a>
+        </li>
+      </ul>
+    </div>
+    
+    <div id="kiln-code-reviews-tutor" class="hidden-text">
+      <strong>Kiln Code Reviews:</strong>  
+      Kiln users can link code reviews directly to a case by including the case number 
+      the code review description. 
+      <span id="click-for-more">(Click for more info!)</span> 
+    </div>
+    
+    <!--MILESTONES -->
+    
+    <div id="milestones-teacher" class="hidden-text">
+      <p>
+        If you're running an agile team, you can think of milestones as sprints.  Organizing your cases into milestones is the easiest way to keep track of a group of cases scheduled for a particular deploy.  Using our Iteration Planner, you can easily view your cases organized into milestones and transfer them between milestones.  Using milestones will also allow you to take advantage of our Evidence Based Scheduling and Time Tracking module, which will help you estimate your time until your next deploy.
+      </p>
+      <h2 id="related-resources">Related Resources</h2>
+      <ul>
+        <li>
+          <a href="http://help.fogcreek.com/12164/milestones-basic-topics-2" target="_blank">
+            Milestone Basics
+          </a>
+        </li>  
+        <li>
+          <a href="http://help.fogcreek.com/12166/milestones-using-them-effectively" target="_blank">
+            Using Milestones Effectively
+          </a>
+        </li>
+        <li>
+          <a href="http://help.fogcreek.com/12165/milestones-how-they-work-with-filters-2" target="_blank">
+            Milestones - How They Work With Filters
+          </a>
+        </li>
+        <li>
+          <a href="http://help.fogcreek.com/12222/planning-sprints-with-the-iteration-planner-2" target="_blank">
+            Agile and Scrum in Manuscript
+          </a>
+        </li>
+      </ul>
+    </div>
+    
+    <div id="milestones-tutor" class="hidden-text">
+      <strong>Milestones:</strong>  
+      Milestones are a way for you to organize incoming cases into sprints, deploys, or builds. 
+      <span id="click-for-more">(Click for more info!)</span> 
+    </div>
+    
+    <!--NOTIFY MORE USERS-->
+    <div id="notify-more-users-teacher" class="hidden-text">
+      <p>
+        Sometimes, you'll want to let a teammate know that you've made a change to
+        a case without assigning the case to them or subscribing them to the case.  
+        When that comes up, "Notify more users" is your best option.
+      </p>
+      <h2 id="related-resources">Related Resources</h2>
+      <ul>
+        <li>
+          <a href="http://help.fogcreek.com/12233/manuscript-notify-more-users" target="_blank">
+            Notify Other Users About Case Edits
+          </a>
+        </li>
+        <li>
+          <a href="http://help.fogcreek.com/12090/notifications-for-cases-and-wiki-articles" target="_blank">
+            Notifications for Cases and Wiki Articles
+          </a>
+        </li>
+      </ul>
+    </div>
+    
+    <div id="notify-more-users-tutor" class="hidden-text">
+      <strong>Notify More Users:</strong>  
+      Use this feature to send a notification to one or more of your teammates
+      when you make a change to the case.  
+      <span id="click-for-more">(Click for more info!)</span> 
+    </div>
+    
+    
+    <!--PRIORITY-->
+    
+    <div id="priority-teacher" class="hidden-text">
+      <p>
+        Priority is one of a number of ways to indicate the importance of a case to your team.  
+        Using the priority feature will allow you to order cases by priority in your list view
+        or create filters so that you can see only your high priority features.
+        Priority is also one of the factors that is considered as part of "importance" for our
+        "orderBy:importance" filter.
+      </p>
+      <h2 id="related-resources">Related Resources</h2>
+      <ul>
+        <li>
+          <a href="http://help.fogcreek.com/12117/manuscript-priority-vs-severity" target="_blank">
+            Priority vs. Severity
+          </a>
+        </li>  
+        <li>
+          <a href="http://help.fogcreek.com/12121/manuscript-ordering-by-importance" target="_blank">
+            Ordering By Importance
+          </a>
+        </li>
+        <li>
+          <a href="http://help.fogcreek.com/12232/backlog-order-2" target="_blank">
+            Backlog Order
+          </a>
+        </li>
+      </ul>
+    </div>
+    
+    <div id="priority-tutor" class="hidden-text">
+      <strong>Priority:</strong>  
+      Priority is one of a number of ways to indicate the importance of a case to your team.
+      <span id="click-for-more">(Click for more info!)</span> 
+    </div>
+    
+    <!--PROJECTS AND AREAS-->
+    
+    <div id="projects-and-areas-teacher" class="hidden-text">
+      <p>
+        Projects are the top level of Manuscript categorization. They're ongoing areas of effort (not 
+        necessarily a project you would do for a customer). 'Manuscript' is a project in the Fog Creek 
+        install for example.  
+      </p>
+      <p>
+        Areas are the organizational unit underneath a project. This can be a part of your application, or a 
+        functional division (Documentation, Testing, Deployment).
+      </p>
+      <h2 id="related-resources">Related Resources</h2>
+      <ul>
+        <li>
+          <a href="http://help.fogcreek.com/12130/parent-cases-and-subcases" target="_blank">
+            Case Hierarchy: Parent Cases and Subcases
+          </a>
+        </li>  
+        <li>
+          <a href="http://help.fogcreek.com/12234/organize-your-projects-with-project-groups-2" target="_blank">
+            Organize Your Projects with Project Groups
+          </a>
+        </li>
+      </ul>
+    </div>
+    
+    <div id="projects-and-areas-tutor" class="hidden-text">
+      <strong>Projects and Areas:</strong>  
+      Divide your work into projects and areas to manage permissions, stay organized, and run an agile team. 
+      <span id="click-for-more">(Click for more info!)</span> 
+    </div>
+    
+    <!--RICH TEXT EDITOR-->
+    
+    <div id="rich-text-editor-teacher" class="hidden-text">
+      <p>
+        Choose between a plain or rich text editor when you are making case edits.
+        Click </> to edit your cases in HTML.
+      </p>
+      <p>
+        Combined with our XML API, virtual users can be a powerful tool.  For example, you can use our XML API to randomly assign cases to your members of your team.  In addition, virtual users can be passed into API calls as ixPerson if you want to automate aspects of your workflow without having your own name attached to each change.   
+      </p>
+      <h2 id="related-resources">Related Resources</h2>
+      <ul>
+        <li>
+          <a href="http://help.fogcreek.com/12214/revise-or-delete-a-comment-or-case-edit" target="_blank">
+            Revise or Delete a Comment or Case Edit
+          </a>
+        </li>
+      </ul>
+    </div>
+    
+     <div id="rich-text-editor-tutor" class="hidden-text">
+      <strong>Rich Text Editor:</strong>  
+      Use the rich text editor to format your text or add HTML
+      to your case edits.
+      <span id="click-for-more">(Click for more info!)</span> 
+    </div>
+    
+    <!--SEE ALSO-->
+    
+    <div id="see-also-teacher" class="hidden-text">
+      <p>
+        Including word case followed by any case number (e.g., "Case 1485") will create a link to the case, 
+        add it to the list of "See also" cases in the sidebar, and add your current case to the linked 
+        case's "See also" list.
+      </p>
+      <h2 id="related-resources">Related Resources</h2>
+      <ul>
+        <li>
+          <a href="http://help.fogcreek.com/12137/link-cases-and-wikis-with-see-also" target="_blank">
+            Easily Link Cases with "See Also"
+          </a>
+        </li>  
+      </ul>
+    </div>
+    
+    <div id="see-also-tutor" class="hidden-text">
+      <strong>See Also:</strong>  
+      Link two cases by including the text "Case [case-number]" in any case edit and each case will appear in the other's "See also" list. 
+      <span id="click-for-more">(Click for more info!)</span> 
+    </div>
+    
+    <!--STATUS-->
+    
+    <div id="status-teacher" class="hidden-text">
+      <p>
+        The status dropdown is a simple but powerful Manuscript attribute.  Leave a 
+        case active to keep it on your radar in your "My Cases" filter.  Resolve 
+        (Waiting For Info) to postpone it to a later date or until another case 
+        is resolved.   
+      </p>
+      <p>
+        How you resolve a case also has an impact on Evidence Based Scheduling.  If
+        you mark a case as "Resolved (Fixed)", the original estimate for the case will 
+        factor into the estimator's historical record.  If you mark a case as "Resolved
+        (Won't Fix)", that estimate won't count toward the estimator's record moving 
+        forward.
+      </p>
+      <h2 id="related-resources">Related Resources</h2>
+      <ul>
+        <li>
+          <a href="http://help.fogcreek.com/12132/categories-statuses-and-workflows" target="_blank">
+            Statuses, Categories, and Workflows
+          </a>
+        </li>  
+        <li>
+          <a href="http://help.fogcreek.com/12218/postponing-cases" target="_blank">
+            Postponing Cases in Manuscript
+          </a>
+        </li>  
+        <li>
+          <a href="http://help.fogcreek.com/12217/resolving-closing-cases" target="_blank">
+            Resolving and Closing Cases
+          </a>
+        </li>  
+      </ul>
+    </div>
+    
+    <div id="status-tutor" class="hidden-text">
+      <strong>Status:</strong>  
+      By setting the status of your Manuscript case, you can postpone it until
+      a later date, merge it with another case, or let it fall off your radar.
+      <span id="click-for-more">(Click for more info!)</span> 
+    </div>
+    
+    <!--STORY POINTS -->
+    
+    <div id="story-points-teacher" class="hidden-text">
+      <p>
+        Story points are a way of providing estimates for features.  Use them in conjunction with
+        our Iterarion Planner to run your scrum team.
+      </p>
+      <h2 id="related-resources">Related Resources</h2>
+      <ul>
+        <li>
+          <a href="http://help.fogcreek.com/9546/agile-and-scrum-in-fogbugz" target="_blank">
+            Agile and Scrum in Manuscript
+          </a>
+        </li>  
+        <li>
+          <a href="http://help.fogcreek.com/10547/planning-sprints-with-the-iteration-planner" target="_blank">
+            Planning Sprints with the Iteration Planner
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div id="story-points-tutor" class="hidden-text">
+      <strong>Story Points:</strong>  
+      An alternative to time estimates for agile development without our Evidence Based
+      Scheduling module.
+      <span id="click-for-more">(Click for more info!)</span> 
+    </div>
+    
+    <!--SUBSCRIPTIONS-->
+    
+    <div id="subscriptions-teacher" class="hidden-text">
+      <p>
+        Subscribe to a case to receive a notification for each change to a case.  
+        Within the case view, you can manually subscribe by clicking "Subscribe" in the sidebar.
+        You can also use "Add Subscribers" to subscribe your teammmates.
+        Use our autosubscribe feature from the case list view to automatically subscribe to all 
+        cases in a project or area.
+      </p>
+      <h2 id="related-resources">Related Resources</h2>
+      <ul>
+        <li>
+          <a href="http://help.fogcreek.com/12092/subscriptions-receive-notifications-for-changes-to-cases-and-wikis-2" target="_blank">
+            Subscriptions
+          </a>
+        </li>  
+        <li>
+          <a href="http://help.fogcreek.com/12090/notifications-for-cases-and-wiki-articles" target="_blank">
+            Notifications for Cases and Wiki Articles
+          </a>
+        </li>
+      </ul>
+    </div>
+    
+    <div id="subscriptions-tutor" class="hidden-text">
+      <strong>Subscriptions:</strong>  Subscribe to a case to receive a notification for
+      each change to a case.  Use "Add Subscribers" to subscribe your 
+      teammmates.  <span id="click-for-more">(Click for more info!)</span> 
+    </div>
+    
+    <!--TAGS-->
+    
+    <div id="tags-teacher" class="hidden-text">
+      <p>
+        Manuscript has a ton of built-in categorization options, but if you need an ad hoc way to 
+        group cases and wiki articles together, use tags. Tags are lightweight in that you 
+        don’t need to pre-configure anything (e.g. set up a new custom field) but you can still 
+        search and set up filters based on tags.  
+      </p>
+      <h2 id="related-resources">Related Resources</h2>
+      <ul>
+        <li>
+          <a href="http://help.fogcreek.com/12135/using-tags-to-group-cases" target="_blank">
+            Use tags to quickly group cases together
+          </a>
+        </li>  
+      </ul>
+    </div>
+    
+    <div id="tags-tutor" class="hidden-text">
+      <strong>Tags:</strong>  
+      Tags are a quick and easy way to group cases and wikis together.
+      <span id="click-for-more">(Click for more info!)</span> 
+    </div>
+    
+    <!--VIRTUAL USERS-->
+    
+    <div id="virtual-users-teacher" class="hidden-text">
+      <p>
+        Virtual Users are free users you can use to queue cases for assignment.  In this case, 
+        for example, Evelyn has assigned the case to an "Up For Grabs" virtual user so that 
+        anyone in her pool of testers can take the case when they're free.
+      </p>
+      <p>
+        Combined with our XML API, virtual users can be a powerful tool.  For example, you can use our XML API to randomly assign cases to your members of your team.  In addition, virtual users can be passed into API calls as ixPerson if you want to automate aspects of your workflow without having your own name attached to each change.   
+      </p>
+      <h2 id="related-resources">Related Resources</h2>
+      <ul>
+        <li>
+          <a href="http://help.fogcreek.com/12289/user-accounts-and-administration" target="_blank">
+            User Administration and User Accounts
+          </a>
+        </li>  
+        <li>
+          <a href="https://api.manuscript.com" target="_blank">
+            Manuscript API Quick Start Guide
+          </a>
+        </li>
+      </ul>
+    </div>
+    
+    <div id="virtual-users-tutor" class="hidden-text">
+      <strong>Virtual Users:</strong>  
+      Free users you can create for the purpose of queuing cases for assignment or updating cases through our API. 
+      <span id="click-for-more">(Click for more info!)</span> 
+    </div>
+    
+    <!--move these guys to a scripts.html partial -->
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    
+    <script src="/client.js"></script>
+    <script src="/feature.js"></script>
+    
+  </body>
+</html>

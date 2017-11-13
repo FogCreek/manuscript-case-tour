@@ -1,0 +1,253 @@
+* {
+  box-sizing: border-box;
+  --pink: #F1A5FF;
+  --blue: #3933FF;
+  --purple: #944DFF;
+  --red: #F55356;
+  --yellow: #F7D331;
+  --green: #54D182;
+  --teal: #00CDD6;
+  --black: #060628;
+  --darkgray: #828293;
+  --medgray: #45455E;
+  --lightgray: #DFDFE6;
+}
+
+
+.feature-box {
+  position: absolute;
+  z-index: 1000;
+  cursor: pointer;
+  /*border-radius: 3px;*/
+/*   border: 3px solid #2392F0; */
+}
+
+.feature-box-hover {
+  border: 3px solid var(--teal);
+  /*border: 2px solid #7dae68;*/
+  
+}
+
+.feature-box:hover {
+  border: 3px solid var(--teal);
+  /*border: 2px solid #7dae68;*/
+}
+
+/*Individual Feature Box Positions*/
+
+#sf-case-number {
+  
+  height: 2.8%;
+  width: 10%;
+  left: 0.5%;
+  top: 3.5%;
+}
+
+/*Case Edit Header Features*/
+
+#sf-category {
+  
+  height: 3.8%;
+  width: 23.7%;
+  left: 25.7%;
+  top: 11.2%;
+}
+
+#sf-case-assignment1 {
+  
+  height: 3.8%;
+  width: 23.5%;
+  left: 50.8%;
+  top: 11.2%;
+}
+
+
+
+#sf-custom-fields {
+  height: 3.7%;
+  width: 23.6%;
+  left: 25.7%;
+  top: 19%;
+}
+
+#sf-milestones {
+  
+  height: 3.8%;
+  width: 23.5%;
+  left: 75.9%;
+  top: 7.2%;
+}
+
+#sf-notify-more-users {
+  height: 4%;
+  width: 73.5%;
+  left: 25.8%;
+  top: 15%;
+}
+
+#sf-projects-and-areas {
+  
+  height: 3.8%;
+  width: 48.6%;
+  left: 25.8%;
+  top: 7.2%;
+
+}
+
+#sf-status1 {
+
+  height: 3.8%;
+  width: 23.5%;
+  left: 75.9%;
+  top: 11.2%;
+}
+
+#sf-status2 {
+  height: 2.3%;
+  width: 6.8%;
+  left: 0.5%;
+  top: 6.2%;
+}
+
+/*BODY OF CASE*/
+
+#sf-kiln-changesets1 {
+  display:none;
+  height: 6.3%;
+  width: 82.5%;
+  left: 16.5%;
+  top: 64.5%;  
+}
+
+#sf-kiln-code-reviews1 {
+  display:none;
+  
+  height: 4.8%;
+  width: 82.5%;
+  left: 16.5%;
+  top: 59.2%;  
+}
+
+#sf-see-also1 {
+  display:none;
+  height: 3%;
+  width: 82.5%;
+  left: 16.5%;
+  top: 84.2%;  
+}
+
+#sf-virtual-users {
+  display:none;
+  height: 3.5%;
+  width: 82.5%;
+  left: 16.5%;
+  top: 52.2%;  
+}
+
+#sf-case-hierarchy3 {
+  height: 1.6%;
+  width: 69.5%;
+  left: 29.7%;
+  top: 69.7%;  
+}
+
+#sf-rich-text-editor {
+  height: 19.3%;
+  width: 74%;
+  left: 25.7%;
+  top: 26.4%;  
+}
+
+#sf-case-assignment2 {
+  height: 4.1%;
+  width: 74%;
+  left: 25.8%;
+  top: 80.2%;
+}
+
+/*Sidebar Features */
+
+/*Standard width and left position for all sidebar features.*/
+
+.sidebar-feature {
+  width: 23.8%;
+  left: 0.5%;
+}
+
+/*****/
+
+#sf-case-hierarchy1 {
+
+  height: 17%;
+  top: 33.3%;
+}
+
+#sf-case-hierarchy2 {
+  height: 2.2%;
+  top: 81.8%;
+}
+
+#sf-correspondent {
+  height: 3.8%;
+  top: 25.0%;
+}
+
+#sf-due-date {
+  height: 5.5%;
+  top: 50.8%;
+}
+
+#sf-evidence-based-scheduling {
+  height: 4.9%;
+  top: 56.8%;
+}
+
+#sf-kiln-changesets2 {
+  /*border: 3px solid #2392F0;*/
+  display:none;
+  height: 5.1%;
+  top: 64.7%;  
+}
+
+#sf-kiln-code-reviews2 {
+  display:none;
+  height: 3.5%;
+  top: 61%;  
+}
+
+#sf-priority {
+  height: 4.1%;
+  top: 29.1%;
+}
+
+#sf-RSS-feeds {
+
+  height: 1.4%;
+  top: 84%;  
+}
+
+#sf-see-also2 {
+  display:none;
+  height: 3.3%;
+  top: 75%;  
+}
+
+#sf-story-points {
+
+  height: 3.7%;
+  top: 62.1%;  
+}
+
+#sf-subscriptions {
+
+  height: 10.6%;
+  top: 85.3%;  
+}
+
+#sf-tags {
+  height: 3.6%;
+  top: 78.3%;  
+}
+
+
+
