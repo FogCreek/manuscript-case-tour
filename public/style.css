@@ -1,0 +1,264 @@
+/* styles */
+/* called by your view template */
+
+/* p.s. vendor prefixes are added automatically */
+
+* {
+  box-sizing: border-box;
+  --pink: #F1A5FF;
+  --blue: #3933FF;
+  --purple: #944DFF;
+  --red: #F55356;
+  --yellow: #F7D331;
+  --green: #54D182;
+  --teal: #00CDD6;
+  --black: #060628;
+  --darkgray: #828293;
+  --medgray: #45455E;
+  --lightgray: #DFDFE6;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  font-family: helvetica, arial, sans-serif;
+  /*margin: 25px 25px 100px 25px;*/
+  color: #303030;
+  padding: 0px;
+}
+
+.hidden-text {
+  display:none;
+}
+
+/*SPEECH BUBBLE*/
+  
+#kakapo-bubble {
+  position: relative;
+  width: 250px;
+  height: 120px;
+  padding: 0px;
+  background: #FFFFFF;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  border: var(--red) solid 2px;
+  padding:2%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#kakapo-bubble:after {
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-width: 15px 9px 0;
+  border-color: #FFFFFF transparent;
+  display: block;
+  width: 0;
+  z-index: 1;
+  bottom: -15px;
+  left: 41px;
+}
+
+#kakapo-bubble:before {
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-width: 16px 10px 0;
+  border-color: var(--red) transparent;
+  display: block;
+  width: 0;
+  z-index: 0;
+  bottom: -18px;
+  left: 40px;
+}
+
+#kakapo-bubble-wrapper {
+  position:absolute;
+  z-index: 5000;
+  display:none;
+}
+
+#click-for-more {
+  color: black;
+  font-weight: bold;
+}
+
+/*CASE PANEL AND BACKGROUND*/
+
+#kakapo-case-image-wrapper {
+  position:relative;
+  width: 70%;
+  max-width: 1200px;
+  margin: 0px auto 120px;
+  border: 3px solid var(--purple);
+}
+
+#case-panel {
+  width: 840px;    
+  /*background-color:#4c9bdb;*/
+  padding: 50px;
+}
+
+
+.hero-fogbugz {
+  margin-top: 50px;
+  background-color: white;
+  padding-top: 4em;
+  position: relative;
+  padding-right: 4%;
+  padding-left: 4%;
+  padding-bottom: 2em;
+}
+
+#welcome {
+  width: 50%;
+  margin: 10px auto 50px;
+  padding: 40px;
+  background-color: var(--pink);
+  border-radius: 20px;
+  font-family: menlo, monospace;
+  
+}
+
+#kakapo-case {
+  margin: auto;
+  width:100%; 
+  height: auto;
+}
+
+/*HEADER*/
+
+#menu {
+  border-bottom: 1px #FFFFFF solid;
+  padding: 1%;
+  background-color: var(--yellow);
+/*   display: flex; */
+/*   justify-content: space-between; */
+}
+
+#manuscript-logo {
+  width:125px;
+  margin-top: 8px;
+}
+
+#menu .nav-right {
+  float: right;
+}
+
+/*FOOTER*/
+
+footer {
+  margin-top: 50px;
+  height: 50px;
+  position: absolute;
+  width: 100%;
+  bottom:0;
+  z-index:10000;
+  background-color: #00CDD6;
+  color:white;
+  text-align:center;
+  padding:1% 1% 5%;
+}
+
+footer a {
+  color: white;
+}
+
+footer a:hover {
+  color: white;
+}
+
+footer a:visited {
+  color: white;
+}
+
+.red-heart {
+  color: var(--red);
+}
+
+.underlined {
+  text-decoration: underline;
+}
+
+.glow-link {
+  transition: all 1.5s;
+}
+
+.glow-link:hover {
+  color:#eaf0f6;
+}
+
+/*TEACH MODAL*/
+
+#related-resources {
+  font-size: 1.5em;
+}
+
+#teach-modal {
+  top:10%;
+  outline: none;
+  font-size: 1em;
+}
+
+#teach-modal-kiwi {
+  position:absolute;
+  z-index: 1000;
+  bottom: 5%;
+  right: 5%;
+}
+
+#teach-modal-kiwi-img {
+  width:100px;
+}
+
+/*EXPLAINER*/
+
+.explainer-button {
+  position:relative;
+  background-color: #006592;
+  color: white;
+  border: 1px solid #ffffff;
+  font-size: 0.75em;
+  border-radius: 5em;
+  padding: 0.1em 0.3em;
+  text-align: center;
+  width: 80px;
+  margin:4em auto 2em;
+  transition: box-shadow 1s;
+}
+
+.explainer-button:hover {
+  box-shadow: 0px 0px 10px 10px #FFFFFF;
+}
+
+#explainer {
+  position:relative;
+  margin:auto;
+  font: 100%/135% "proxima-nova", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  text-align:center;
+  /*background-color:#FBFBFB;*/
+  color: #303030;
+  padding:5%;
+  font-size: 1.25em;
+  display:none;
+}
+
+#explainer h2 {
+  /*text-decoration: underline;*/
+}
+
+#explainer-text {
+  position: relative;
+  margin: auto;
+  width: 60%;
+}
+
+
+
+
+
+
